@@ -1,7 +1,7 @@
 {
-  "orgName": "jhaydraude company",
+  "orgName": "JHD Scratch",
   "edition": "Developer",
-  "features": [],
+  "features": ["DevelopmentWave","WavePlatform"],
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true

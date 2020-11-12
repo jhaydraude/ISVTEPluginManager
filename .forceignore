@@ -8,5 +8,8 @@ package.xml
 **/jsconfig.json
 **/.eslintrc.json
 
+#Profiles
+force-app/main/default/profiles/**
+
 # LWC Jest
 **/__tests__/**
