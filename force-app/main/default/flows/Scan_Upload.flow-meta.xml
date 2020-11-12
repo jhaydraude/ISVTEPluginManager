@@ -16,6 +16,7 @@
     </actionCalls>
     <apiVersion>50.0</apiVersion>
     <interviewLabel>Scan Upload {!$Flow.CurrentDateTime}</interviewLabel>
+    <isTemplate>true</isTemplate>
     <label>Scan Upload</label>
     <processMetadataValues>
         <name>BuilderType</name>
