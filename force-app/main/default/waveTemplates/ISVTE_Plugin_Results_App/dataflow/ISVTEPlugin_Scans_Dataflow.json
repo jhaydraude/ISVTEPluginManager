@@ -1,0 +1,62 @@
+{
+  "notificationLevel": "",
+  "workflowDefinition": {
+    "Scans": {
+      "action": "sfdcDigest",
+      "parameters": {
+        "fields": [
+          {"name": "JHDPackage__Application__c"},
+          {"name": "JHDPackage__Scan_Date__c"},
+          {"name": "Name"}
+        ],
+        "object": "JHDPackage__Scan__c"
+      }
+    },
+    "Augment Apps and Scans": {
+      "action": "augment",
+      "parameters": {
+        "right_key": ["JHDPackage__Application__c"],
+        "left": "Apps",
+        "left_key": ["Id"],
+        "right_select": [
+          "JHDPackage__Application__c",
+          "Name",
+          "JHDPackage__Scan_Date__c"
+        ],
+        "right": "Scans",
+        "relationship": "Scan",
+        "operation": "LookupSingleValue"
+      }
+    },
+    "Register App Scans": {
+      "action": "sfdcRegister",
+      "parameters": {
+        "rowLevelSecurityFilter": "",
+        "name": "AppScans",
+        "alias": "${App.Datasets.AppScans_tp.FullyQualifiedName}",
+        "source": "Augment Apps and Scans"
+      }
+    },
+    "Apps": {
+      "action": "sfdcDigest",
+      "parameters": {
+        "fields": [
+          {"name": "Name"},
+          {"name": "Id"}
+        ],
+        "object": "JHDPackage__Application__c"
+      }
+    }
+  },
+  "_type": "dataflow",
+  "description": "ISVTEPlugin Scans Dataflow",
+  "MasterLabel": "ISVTEPlugin Scans Dataflow",
+  "nextRun": "",
+  "WorkflowStatus": "Inactive",
+  "isDeletable": true,
+  "longRunningAlertInMins": "",
+  "DataflowType": "USER",
+  "name": "ISVTEPlugin_Scans_Dataflow",
+  "_url": "/insights/internal_api/v1.0/esObject/workflow//json",
+  "_uid": ""
+}
