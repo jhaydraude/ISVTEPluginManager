@@ -4,19 +4,11 @@
         <application>ISVTE_Plugin_Manager</application>
         <visible>true</visible>
     </applicationVisibilities>
-    <classAccesses>
-        <apexClass>BatchProcessScans</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
+     <classAccesses>
         <apexClass>PluginScanCtl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-    <classAccesses>
-        <apexClass>ScheduleScanBatch</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
+     <classAccesses>
         <apexClass>TEScansTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
