@@ -1,5 +1,5 @@
 @isTest
-private class TEScansTest {
+private class BatchProcessTest {
     
     @testSetup
     static void setupTestData() {
@@ -34,10 +34,21 @@ private class TEScansTest {
     }
     
     @isTest
-    static void testScan() {
-        List<Scan__c> s = [select id from Scan__c];
-        List<id> i = new List<id>();
-        i.add(s[0].id);
-        PluginScanCtl.processResults(i);
+    static void testBatch() {
+        Test.startTest();
+        BatchProcessScans b = new BatchProcessScans();
+        Database.executeBatch(b);
+        Test.stopTest();
     }
+    
+    @isTest
+    static void testSchedule() {
+        Test.startTest();
+        ScheduleScanBatch ssb = new ScheduleScanBatch();
+        String cron = '0 0 23 * * ?';        
+        system.schedule('Test Sched', cron, ssb);
+        test.stopTest();
+    }
+    
+
 }
