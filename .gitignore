@@ -3,8 +3,13 @@
 # For useful gitignore templates see: https://github.com/github/gitignore
 
 # Salesforce cache
-.sfdx/
+.sfdx/*
 .localdevserver/
+tmp/
+
+# Add exception to .sfdx/sfdx-config.json for DEMO PURPOSES ONLY.
+# This is done to help suppress SFDX Extension messages.
+!.sfdx/sfdx-config.json
 
 # LWC VSCode autocomplete
 **/lwc/jsconfig.json
