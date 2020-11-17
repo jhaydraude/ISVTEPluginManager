@@ -1,11 +1,9 @@
 {
+    "namespace": "isvtemgr",
     "packageDirectories": [
         {
             "path": "force-app",
             "default": true
         }
-    ],
-    "namespace": "isvtemgr",
-    "sfdcLoginUrl": "https://login.salesforce.com",
-    "sourceApiVersion": "50.0"
+    ]
 }
