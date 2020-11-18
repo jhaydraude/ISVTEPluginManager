@@ -1,6 +1,7 @@
 {
   "editor.cursorBlinking": "solid",
   "editor.cursorStyle": "block",
+  "editor.hover.enabled": false,
   "editor.minimap.enabled": false,
   "editor.scrollbar.horizontal": "hidden",
   "editor.scrollbar.vertical": "hidden",
