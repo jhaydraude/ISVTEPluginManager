@@ -1,6 +1,7 @@
 {
   "editor.cursorBlinking": "solid",
   "editor.cursorStyle": "block",
+  "editor.minimap.enabled": false,
   "search.exclude": {
     "**/node_modules": true,
     "**/bower_components": true,
