@@ -18,7 +18,7 @@ private class BatchProcessTest {
         
         ContentVersion cv = new ContentVersion();
         cv.Title='TestScan';
-        cv.PathOnClient='Test.json';
+        cv.PathOnClient='TestScan.json';
         cv.VersionData= Blob.valueof('[{"path":"./metadataPackage_1589470282990","date":"Thu 14 May 2020 11:31:25 EDT","result":""}]');
         insert cv;
         
