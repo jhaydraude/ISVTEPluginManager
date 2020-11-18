@@ -2,6 +2,8 @@
   "editor.cursorBlinking": "solid",
   "editor.cursorStyle": "block",
   "editor.minimap.enabled": false,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
   "search.exclude": {
     "**/node_modules": true,
     "**/bower_components": true,
